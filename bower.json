@@ -1,0 +1,36 @@
+{
+  "name": "angular-crumble",
+  "main": "crumble.js",
+  "version": "0.1.0",
+  "authors": [
+    "Raphael von der Grün <raphinesse@gmail.com>"
+  ],
+  "description": "A highly customizable breadcrumb service for AngularJS. Gets you back home the way YOU want.",
+  "keywords": [
+    "breadcrumb",
+    "bread",
+    "crumb",
+    "ng",
+    "angular",
+    "js",
+    "angularjs",
+    "navigation",
+    "parent",
+    "path",
+    "route",
+    "dynamic",
+    "interpolate",
+    "service"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": ">=1.2 <2.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "browser": "Alert when using browser globals instead of angular services",
+  "browser": false,
+
+  "expr": "This is only true until there is a fix for using the bang IIFE without it",
+  "expr": true,
+
+  "esnext": true,
+  "bitwise": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "indent": 2,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "quotmark": "single",
+  "regexp": true,
+  "undef": true,
+  "unused": "strict",
+  "strict": true,
+  "trailing": true,
+  "smarttabs": true,
+  "maxlen": 120,
+
+  "globals": {
+    "angular": false
+  }
+}
