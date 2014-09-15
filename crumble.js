@@ -3,13 +3,13 @@
 
   angular.module('crumble', ['ngRoute'])
     .factory('crumble', function ($location, $route, $interpolate) {
-      var context;
       var crumble = {
         trail: [],
+        context: {},
       };
 
-      crumble.setContext = function (ctx) {
-        context = ctx;
+      crumble.update = function (context) {
+        crumble.context = context;
         crumble.trail = build($location.path());
       };
 
@@ -25,7 +25,7 @@
         var route = crumble.getRoute(path);
         return {
           path: path,
-          label: $interpolate(route.label)(context),
+          label: $interpolate(route.label)(crumble.context),
         };
       };
 
