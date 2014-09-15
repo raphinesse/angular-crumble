@@ -9,7 +9,7 @@
       };
 
       crumble.update = function (context) {
-        crumble.context = context;
+        crumble.context = context || crumble.context;
         crumble.trail = build($location.path());
       };
 
