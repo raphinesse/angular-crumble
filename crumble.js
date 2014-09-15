@@ -32,17 +32,17 @@
         return route.redirectTo ? $route.routes[route.redirectTo] : route;
       };
 
-      var build = function (path) {
+      function build(path) {
         return !path ? [] : build(crumble.getParent(path)).concat(crumble.getCrumb(path));
-      };
+      }
 
-      var find = function (obj, fn, thisArg) {
+      function find(obj, fn, thisArg) {
         for (var key in obj) {
           if (obj.hasOwnProperty(key) && fn.call(thisArg, obj[key], key, obj)) {
             return obj[key];
           }
         }
-      };
+      }
 
       return crumble;
     });
