@@ -4,10 +4,16 @@
   angular.module('crumble', ['ngRoute'])
     .factory('crumble', function ($location, $route, $interpolate) {
       var context;
+      var trail = [];
+      var crumble = {
+        getTrail: function () {
+          return trail;
+        },
+      };
 
-      var crumble = function (ctx) {
+      crumble.setContext = function (ctx) {
         context = ctx;
-        return build($location.path());
+        angular.copy(build($location.path(), trail));
       };
 
       var build = function (path) {
