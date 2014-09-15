@@ -13,10 +13,6 @@
         crumble.trail = build($location.path());
       };
 
-      var build = function (path) {
-        return !path ? [] : build(crumble.getParent(path)).concat(crumble.getCrumb(path));
-      };
-
       crumble.getParent = function (path) {
         return path.replace(/[^\/]*\/?$/, '');
       };
@@ -34,6 +30,10 @@
           return route.regexp && route.regexp.test(path);
         });
         return route.redirectTo ? $route.routes[route.redirectTo] : route;
+      };
+
+      var build = function (path) {
+        return !path ? [] : build(crumble.getParent(path)).concat(crumble.getCrumb(path));
       };
 
       var find = function (obj, fn, thisArg) {
