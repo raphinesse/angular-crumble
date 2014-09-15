@@ -30,9 +30,10 @@
       };
 
       crumble.getRoute = function (path) {
-        return find($route.routes, function (route) {
+        var route = find($route.routes, function (route) {
           return route.regexp && route.regexp.test(path);
         });
+        return route.redirectTo ? $route.routes[route.redirectTo] : route;
       };
 
       var find = function (obj, fn, thisArg) {
