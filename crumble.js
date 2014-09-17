@@ -20,7 +20,7 @@
       crumble.getCrumb = function (path) {
         var route = crumble.getRoute(path);
         return {
-          path: path,
+          path: $interpolate(path)(crumble.context),
           label: $interpolate(route.label)(crumble.context),
         };
       };
