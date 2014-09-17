@@ -5,7 +5,7 @@
   "authors": [
     "Raphael von der Grün <raphinesse@gmail.com>"
   ],
-  "description": "A highly customizable breadcrumb service for AngularJS. Gets you back home the way YOU want.",
+  "description": "A highly customizable breadcrumb service for AngularJS with ngRoute. Gets you back home the way YOU want.",
   "keywords": [
     "breadcrumb",
     "bread",
