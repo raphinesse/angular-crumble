@@ -31,6 +31,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": ">=1.2 <2.0"
+    "angular": ">=1.2 <2.0",
+    "angular-route": ">=1.2 <2.0"
   }
 }
