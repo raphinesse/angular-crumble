@@ -34,7 +34,7 @@ Output the breadcrumbs.
 </a>
 ~~~
 
-Also check out how you can **[customize crumble](#customize)** to make it fit your needs.
+Also check out how you can **[customize crumble](#customization)** to make it fit your needs.
 
 
 ## Setup
