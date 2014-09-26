@@ -1,7 +1,7 @@
 {
   "name": "angular-crumble",
   "main": "crumble.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     "Raphael von der Grün <raphinesse@gmail.com>"
   ],
