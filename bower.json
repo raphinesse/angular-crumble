@@ -6,6 +6,10 @@
     "Raphael von der Grün <raphinesse@gmail.com>"
   ],
   "description": "A highly customizable breadcrumb service for AngularJS with ngRoute. Gets you back home the way YOU want.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/raphinesse/angular-crumble.git"
+  },
   "keywords": [
     "breadcrumb",
     "bread",
