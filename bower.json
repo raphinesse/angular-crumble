@@ -1,11 +1,16 @@
 {
   "name": "angular-crumble",
-  "main": "crumble.js",
+  "description": "A highly customizable breadcrumb service for AngularJS with ngRoute. Gets you back home the way YOU want.",
   "version": "0.1.1",
+  "main": "crumble.js",
+  "license": "MIT",
   "authors": [
     "Raphael von der Grün <raphinesse@gmail.com>"
   ],
-  "description": "A highly customizable breadcrumb service for AngularJS with ngRoute. Gets you back home the way YOU want.",
+  "dependencies": {
+    "angular": ">=1.2 <2.0",
+    "angular-route": ">=1.2 <2.0"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/raphinesse/angular-crumble.git"
@@ -26,16 +31,11 @@
     "interpolate",
     "service"
   ],
-  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "angular": ">=1.2 <2.0",
-    "angular-route": ">=1.2 <2.0"
-  }
+  ]
 }
