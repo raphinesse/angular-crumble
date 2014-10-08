@@ -19,6 +19,7 @@
 
       crumble.getCrumb = function (path) {
         var route = crumble.getRoute(path);
+        if (!route) throw new Error('Could not find matching route for path "' + path + '"');
         return {
           path: $interpolate(path)(crumble.context),
           label: $interpolate(route.label)(crumble.context),
@@ -29,7 +30,7 @@
         var route = find($route.routes, function (route) {
           return route.regexp && route.regexp.test(path);
         });
-        return route.redirectTo ? $route.routes[route.redirectTo] : route;
+        return (route && route.redirectTo) ? $route.routes[route.redirectTo] : route;
       };
 
       function build(path) {
