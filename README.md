@@ -140,7 +140,7 @@ We interpret your application as a rooted tree. Each view is a node that either 
 Here's an example on how to configure crumble so that you can override standard parents by adding a `parent` property to a route
 
 ~~~js
-// Put this in your run Method
+// Put this in your run method
 var getParent = crumble.getParent;
 crumble.getParent = function (path) {
   var route = crumble.getRoute(path);
