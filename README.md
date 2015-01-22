@@ -98,11 +98,10 @@ angular.module('app')
     var thing = things.get($routeParams.thingId) || { title: 'Unknown Thing' };
 
     // Updates the breadcrumb trail with the given context
-    crumble.update(thing);
+    crumble.update({thing: thing});
 
-    // Instead you could also set context directly
-    // Useful for more complex context assembly
-    crumble.context.thing = thing;
+    // Instead you could also build up context in place before calling update
+    crumble.context = {thing: thing};
     crumble.update();
 
   });
