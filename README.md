@@ -138,6 +138,17 @@ We interpret your application as a rooted tree. Each view is a node that either 
 
 *"What do I care?"*, you say? Well, by default the root is `/` and the parent is determined by simply dropping the last path segment of the current node (`/parent/child`). But you can completely customize this behavior by replacing `crumble.getParent` with your own implementation. Just take care that you don't create any cycles.
 
+Here's an example on how to configure crumble so that you can override standard parents by adding a `parent` property to a route
+
+~~~js
+// Put this in your run Method
+var getParent = crumble.getParent;
+crumble.getParent = function (path) {
+  var route = crumble.getRoute(path);
+  return route && angular.isDefined(route.parent) ? route.parent : getParent(path);
+};
+~~~
+
 ### Customizing the breadcrumb objects
 
 The entries in `crumble.trail` are the results of calling `crumble.getCrumb` for each node, passing that node's path as an argument. So again, if you want to add custom properties to the breadcrumbs (think `title` attributes and stuff), just override that function.
