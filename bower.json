@@ -16,21 +16,21 @@
     "url": "git://github.com/raphinesse/angular-crumble.git"
   },
   "keywords": [
-    "breadcrumbs",
-    "breadcrumb",
+    "angular",
+    "angularjs",
     "bread",
+    "breadcrumb",
+    "breadcrumbs",
     "crumb",
     "crumbs",
-    "ng",
-    "angular",
+    "dynamic",
+    "interpolate",
     "js",
-    "angularjs",
     "navigation",
+    "ng",
     "parent",
     "path",
     "route",
-    "dynamic",
-    "interpolate",
     "service"
   ],
   "ignore": [
