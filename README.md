@@ -118,6 +118,8 @@ $rootScope.$on('$routeChangeSuccess', function() {
 
 ### Display the breadcrumb trail
 
+To render the breadcrumbs, attach crumble to your main controller's scope and put something like the code below in the corresponding template.
+
 ~~~html
 <ol>
   <li ng-repeat="bc in crumble.trail">
@@ -125,6 +127,8 @@ $rootScope.$on('$routeChangeSuccess', function() {
   </li>
 </ol>
 ~~~
+
+Omit the hash mark in the link if you are using HTML5 mode.
 
 
 ## Customization
