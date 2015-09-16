@@ -21,7 +21,7 @@
   "strict": true,
   "trailing": true,
   "smarttabs": true,
-  "maxlen": 120,
+  "laxbreak": true,
 
   "globals": {
     "angular": false

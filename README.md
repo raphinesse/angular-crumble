@@ -169,7 +169,7 @@ crumble.getCrumb = function (path) {
 
 ## Contributing
 
-In lieu of a formal style guide, take care to maintain the existing coding style.
+This repository uses the [Node.js Style Guide][nsg]. Contributions have to follow it too. You can use [JSHint][jsh] and [JSCS][jscs] to check your code for style guide conformance. Please use aptly named topic branches for pull requests.
 
 
 ## License
@@ -181,3 +181,6 @@ Copyright (c) 2014 Raphael von der Grün. Licensed under the MIT License.
 [wiredep]:      https://github.com/taptapship/wiredep
 [ngRoute]:      https://docs.angularjs.org/api/ngRoute
 [$interpolate]: https://docs.angularjs.org/api/ng/service/$interpolate
+[nsg]:          https://github.com/felixge/node-style-guide
+[jsh]:          http://jshint.com/
+[jscs]:         http://jscs.info/
