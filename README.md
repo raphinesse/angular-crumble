@@ -11,6 +11,7 @@ Install crumble using [Bower]. Have [ngRoute] up and running.
 ~~~
 bower install angular-crumble --save
 ~~~
+crumble can also be used with [npm] and [Browserify]. It follows the conventions described in this [npm blog post].
 
 Add breadcrumb labels. With [interpolation][$interpolate].
 ~~~js
@@ -181,10 +182,13 @@ This repository uses the [Node.js Style Guide][nsg]. Contributions have to follo
 Copyright (c) 2014 Raphael von der Grün. Licensed under the MIT License.
 
 
-[Bower]:        http://bower.io/
-[wiredep]:      https://github.com/taptapship/wiredep
-[ngRoute]:      https://docs.angularjs.org/api/ngRoute
-[$interpolate]: https://docs.angularjs.org/api/ng/service/$interpolate
-[nsg]:          https://github.com/felixge/node-style-guide
-[jsh]:          http://jshint.com/
-[jscs]:         http://jscs.info/
+[Bower]:          http://bower.io/
+[wiredep]:        https://github.com/taptapship/wiredep
+[ngRoute]:        https://docs.angularjs.org/api/ngRoute
+[$interpolate]:   https://docs.angularjs.org/api/ng/service/$interpolate
+[nsg]:            https://github.com/felixge/node-style-guide
+[jsh]:            http://jshint.com/
+[jscs]:           http://jscs.info/
+[npm]:            https://www.npmjs.com/
+[Browserify]:     http://browserify.org/
+[npm blog post]:  http://blog.npmjs.org/post/114584444410
