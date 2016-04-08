@@ -119,7 +119,7 @@ $rootScope.$on('$routeChangeSuccess', function() {
 
 ### Display the breadcrumb trail
 
-To render the breadcrumbs, attach crumble to your main controller's scope and put something like the code below in the corresponding template.
+To render the breadcrumbs, attach crumble to your view's scope and put something like the code below in the corresponding template.
 
 ~~~html
 <ol>
@@ -140,7 +140,7 @@ If you bore with me to this point then you probably want to know about crumble's
 
 We interpret your application as a rooted tree. Each view is a node that either has a parent or is the root of the tree. Each node is identified by its path. The parent of a node with path `path` is defined by the result of a call to `crumble.getParent(path)`. If the return value is falsy, the node is considered as the root.
 
-*"What do I care?"*, you say? Well, by default the root is `/` and the parent is determined by simply dropping the last path segment of the current node (`/parent/child`). But you can completely customize this behavior by replacing `crumble.getParent` with your own implementation. Just take care that you don't create any cycles.
+*"What do I care?"*, you say? Well, by default the root is `/` and the parent is determined by simply dropping the last path segment of the current node (e.g. `/` is the parent of `/foo` which is the parent of `/foo/bar`). But you can completely customize this behavior by replacing `crumble.getParent` with your own implementation. Just take care that you don't create any cycles.
 
 Here's an example on how to configure crumble so that you can override standard parents by adding a `parent` property to a route
 
@@ -157,7 +157,7 @@ crumble.getParent = function (path) {
 
 The entries in `crumble.trail` are the results of calling `crumble.getCrumb` for each node, passing that node's path as an argument. So again, if you want to add custom properties to the breadcrumbs (think `title` attributes and stuff), just override that function.
 
-For reference, the standard implementation looks like this:
+Simplified, the standard implementation looks like this:
 
 ~~~js
 crumble.getCrumb = function (path) {
