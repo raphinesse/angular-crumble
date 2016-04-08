@@ -1,6 +1,10 @@
 !function() {
   'use strict';
 
+  var ERR_NO_ROUTE = 'Could not find matching route definition for path ';
+  var ERR_NO_LABEL = 'Could not find property "label" of type "String" in route'
+                   + ' definition for path ';
+
   function bakery($location, $route, $interpolate) {
     var crumble = {
       trail: [],
@@ -19,9 +23,10 @@
     crumble.getCrumb = function(path) {
       var route = crumble.getRoute(path);
       if (!route) {
-        throw new Error(
-          'Could not find matching route for path ' + JSON.stringify(path)
-        );
+        throw new Error(ERR_NO_ROUTE + JSON.stringify(path));
+      }
+      if (!angular.isString(route.label)) {
+        throw new Error(ERR_NO_LABEL + JSON.stringify(path));
       }
       return {
         path: $interpolate(path)(crumble.context),
