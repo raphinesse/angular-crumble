@@ -4,6 +4,7 @@
   var ERR_NO_ROUTE = 'Could not find matching route definition for path ';
   var ERR_NO_LABEL = 'Could not find property "label" of type "String" in route'
                    + ' definition for path ';
+  var ERR_NO_PATH = 'No path given to getParent()';
 
   function bakery($location, $route, $interpolate) {
     var crumble = {
@@ -17,6 +18,9 @@
     };
 
     crumble.getParent = function(path) {
+      if(!path){
+        throw new Error(ERR_NO_PATH);
+      }
       return path.replace(/[^\/]*\/?$/, '');
     };
 
