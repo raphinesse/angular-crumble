@@ -171,6 +171,15 @@ crumble.getCrumb = function (path) {
 };
 ~~~
 
+## Running tests
+
+~~~
+npm install
+npm test
+~~~
+
+Check _coverage/_ directory created after running the tests to see code coverage.
+
 
 ## Contributing
 

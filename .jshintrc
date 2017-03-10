@@ -24,6 +24,15 @@
   "laxbreak": true,
 
   "globals": {
-    "angular": false
+    "angular": false,
+    "jasmine": false,
+    "module": false,
+    "require": false,
+    "describe": false,
+    "it": false,
+    "inject": false,
+    "beforeEach": false,
+    "expect": false,
+    "spyOn": false
   }
 }
