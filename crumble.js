@@ -18,7 +18,7 @@
     };
 
     crumble.getParent = function(path) {
-      if(!path){
+      if (!path) {
         throw new Error(ERR_NO_PATH);
       }
       return path.replace(/[^\/]*\/?$/, '');

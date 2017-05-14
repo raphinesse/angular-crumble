@@ -39,6 +39,8 @@
   "devDependencies": {
     "angular": "^1.2",
     "angular-mocks": "^1.2",
+    "eslint": "^3.19.0",
+    "eslint-config-node-style-guide": "^3.0.0",
     "jasmine-core": "^2.5.2",
     "karma": "^1.5.0",
     "karma-coverage": "^1.1.1",
@@ -49,6 +51,7 @@
     "sync-version": "^1.0.1"
   },
   "scripts": {
+    "lint": "eslint .",
     "test": "karma start",
     "version": "sync-version bower.json && git add bower.json"
   }

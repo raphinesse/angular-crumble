@@ -1,3 +1,6 @@
+/* eslint-env jasmine */
+/* global angular:false, inject:false */
+
 (function() {
   'use strict';
 
@@ -17,9 +20,10 @@
         expect(pathParent).toEqual('test/parent/');
       }));
 
-      it('should throw an error when no path is given', inject(function(crumble) {
-        expect(crumble.getParent).toThrowErrorOfType('Error');
-      }));
+      it('should throw an error when no path is given',
+        inject(function(crumble) {
+          expect(crumble.getParent).toThrowErrorOfType('Error');
+        }));
     });
 
     describe('getRoute method', function() {
@@ -58,7 +62,7 @@
       it('should return interpolated path and label for given path',
         inject(function($interpolate, crumble) {
           var path = '/parent/test';
-          var route = { label: 'Test' };
+          var route = {label: 'Test'};
           spyOn(crumble, 'getRoute').and.returnValue(route);
 
           var crumb = crumble.getCrumb(path);

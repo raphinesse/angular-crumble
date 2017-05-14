@@ -183,7 +183,7 @@ Check _coverage/_ directory created after running the tests to see code coverage
 
 ## Contributing
 
-This repository uses the [Node.js Style Guide][nsg]. Contributions have to follow it too. You can use [JSHint][jsh] and [JSCS][jscs] to check your code for style guide conformance. Please use aptly named topic branches for pull requests.
+This repository uses the [Node.js Style Guide][nsg]. Contributions have to follow it too. You can use `npm run lint` to check your code for style guide conformance. Please use aptly named topic branches for pull requests.
 
 
 ## License
@@ -196,8 +196,6 @@ Copyright (c) 2014 Raphael von der Grün. Licensed under the MIT License.
 [ngRoute]:        https://docs.angularjs.org/api/ngRoute
 [$interpolate]:   https://docs.angularjs.org/api/ng/service/$interpolate
 [nsg]:            https://github.com/felixge/node-style-guide
-[jsh]:            http://jshint.com/
-[jscs]:           http://jscs.info/
 [npm]:            https://www.npmjs.com/
 [Browserify]:     http://browserify.org/
 [npm blog post]:  http://blog.npmjs.org/post/114584444410
