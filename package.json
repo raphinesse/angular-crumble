@@ -45,9 +45,11 @@
     "karma-jasmine": "^1.1.0",
     "karma-jasmine-matchers": "^3.6.0",
     "karma-phantomjs-launcher": "^1.0.3",
-    "karma-verbose-reporter": "0.0.6"
+    "karma-verbose-reporter": "0.0.6",
+    "sync-version": "^1.0.1"
   },
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "version": "sync-version bower.json && git add bower.json"
   }
 }
