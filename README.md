@@ -1,54 +1,39 @@
 # crumble
 
-*A highly customizable breadcrumb service for AngularJS with ngRoute. Gets you back home the way __you__ want.*
+*A highly customizable breadcrumb service for AngularJS 1.x with ngRoute. Gets you back home the way __you__ want.*
 
-While other breadcrumb services for ngRoute make many assumptions about your application, crumble provides sensible defaults but also provides you with the means to customize every detail of the service.
-
-
-## Quick start
-
-Install crumble using [Bower]. Have [ngRoute] up and running.
-~~~
-bower install angular-crumble --save
-~~~
-crumble can also be used with [npm] and [Browserify]. It follows the conventions described in this [npm blog post].
-
-Add breadcrumb labels. With [interpolation][$interpolate].
-~~~js
-$routeProvider.when('/', {
-  label: 'Hello {{name}}!',
-  // controller, template, ...
-})
-~~~
-
-Generate the breadcrumbs for the current path using the given context for interpolation.
-~~~js
-crumble.update({
-  name: 'crumble'
-});
-~~~
-
-Output the breadcrumbs.
-~~~html
-<a ng-repeat="bc in crumble.trail" ng-href="#{{bc.path}}">
-  {{bc.label}}
-</a>
-~~~
-
-Also check out how you can **[customize crumble](#customization)** to make it fit your needs.
+crumble allows you to generate dynamic breadcrumbs for your application.
+It provides sensible defaults but also allows you to [customize](#customization) every detail of the service to match your app's structure.
 
 
 ## Setup
 
-Install crumble using [Bower]. Have [ngRoute] up and running.
+### Using a Module System
+
+Install crumble using your favourite package manager
+~~~
+yarn add angular-crumble || npm i -S angular-crumble
+~~~
+
+Require `crumble` in your AngularJS module's dependencies
+~~~js
+angular.module('app', [require('angular-crumble')]);
+~~~
+
+crumble follows the conventions described in this [npm blog post].
+
+### Using Plain Old Script Tags
+Have [ngRoute] up and running.
+
+Download crumble using [Bower] or just manually.
 ~~~
 bower install angular-crumble --save
 ~~~
 
-Include `crumble.js` in your HTML if you don't use [wiredep] or something similar.
+Load `crumble.js` from your HTML.
 
 ~~~html
-<script src="bower_components/angular-crumble/crumble.js"></script>
+<script src="path/to/crumble.js"></script>
 ~~~
 
 Require `crumble` in your AngularJS module's dependencies
@@ -188,14 +173,12 @@ This repository uses the [Node.js Style Guide][nsg]. Contributions have to follo
 
 ## License
 
-Copyright (c) 2014 Raphael von der Grün. Licensed under the MIT License.
+Copyright (c) 2014–2017 Raphael von der Grün. Licensed under the MIT License.
 
 
 [Bower]:          http://bower.io/
-[wiredep]:        https://github.com/taptapship/wiredep
 [ngRoute]:        https://docs.angularjs.org/api/ngRoute
 [$interpolate]:   https://docs.angularjs.org/api/ng/service/$interpolate
 [nsg]:            https://github.com/felixge/node-style-guide
 [npm]:            https://www.npmjs.com/
-[Browserify]:     http://browserify.org/
 [npm blog post]:  http://blog.npmjs.org/post/114584444410
