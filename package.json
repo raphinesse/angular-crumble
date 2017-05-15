@@ -40,7 +40,6 @@
     "angular": "^1.2",
     "angular-mocks": "^1.2",
     "eslint": "^3.19.0",
-    "eslint-config-node-style-guide": "^3.0.0",
     "jasmine-core": "^2.5.2",
     "karma": "^1.5.0",
     "karma-coverage": "^1.1.1",
@@ -48,6 +47,7 @@
     "karma-jasmine-matchers": "^3.6.0",
     "karma-phantomjs-launcher": "^1.0.3",
     "karma-verbose-reporter": "0.0.6",
+    "node-style-guide": "https://github.com/felixge/node-style-guide.git",
     "sync-version": "^1.0.1"
   },
   "scripts": {
