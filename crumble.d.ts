@@ -1,4 +1,5 @@
 /// <reference types="@types/angular-route" />
+import { route } from "angular";
 
 declare module 'angular' {
   namespace route {
