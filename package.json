@@ -6,9 +6,7 @@
   "license": "MIT",
   "author": "Raphael von der Grün <raphinesse@gmail.com>",
   "peerDependencies": {
-    "angular": "^1.2"
-  },
-  "dependencies": {
+    "angular": "^1.2",
     "angular-route": "^1.2"
   },
   "repository": {
