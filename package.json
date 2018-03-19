@@ -9,7 +9,8 @@
     "angular": "^1.2"
   },
   "dependencies": {
-    "angular-route": "^1.2"
+    "angular-route": "^1.2",
+    "@types/angular-route": "^1.3.5"
   },
   "repository": {
     "type": "git",
@@ -54,5 +55,6 @@
     "lint": "eslint .",
     "test": "karma start",
     "version": "sync-version bower.json && git add bower.json"
-  }
+  },
+  "types": "crumble.d.ts"
 }
