@@ -1,6 +1,6 @@
 {
   "name": "angular-crumble",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A highly customizable breadcrumb service for AngularJS with ngRoute. Gets you back home the way YOU want.",
   "keywords": [
     "angular",
