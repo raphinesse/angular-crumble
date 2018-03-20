@@ -1,21 +1,7 @@
 {
   "name": "angular-crumble",
-  "description": "A highly customizable breadcrumb service for AngularJS with ngRoute. Gets you back home the way YOU want.",
   "version": "0.2.3",
-  "main": "index.js",
-  "license": "MIT",
-  "author": "Raphael von der Grün <raphinesse@gmail.com>",
-  "peerDependencies": {
-    "angular": "^1.2",
-    "angular-route": "^1.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/raphinesse/angular-crumble.git"
-  },
-  "bugs": {
-    "url": "https://github.com/raphinesse/angular-crumble/issues"
-  },
+  "description": "A highly customizable breadcrumb service for AngularJS with ngRoute. Gets you back home the way YOU want.",
   "keywords": [
     "angular",
     "angularjs",
@@ -34,6 +20,21 @@
     "route",
     "service"
   ],
+  "bugs": {
+    "url": "https://github.com/raphinesse/angular-crumble/issues"
+  },
+  "license": "MIT",
+  "author": "Raphael von der Grün <raphinesse@gmail.com>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/raphinesse/angular-crumble.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "karma start",
+    "version": "sync-version bower.json && git add bower.json"
+  },
   "devDependencies": {
     "angular": "^1.2",
     "angular-mocks": "^1.2",
@@ -46,12 +47,11 @@
     "karma-jasmine-matchers": "^3.6.0",
     "karma-phantomjs-launcher": "^1.0.3",
     "karma-verbose-reporter": "0.0.6",
-    "node-style-guide": "https://github.com/felixge/node-style-guide.git",
+    "node-style-guide": "felixge/node-style-guide",
     "sync-version": "^1.0.1"
   },
-  "scripts": {
-    "lint": "eslint .",
-    "test": "karma start",
-    "version": "sync-version bower.json && git add bower.json"
+  "peerDependencies": {
+    "angular": "^1.2",
+    "angular-route": "^1.2"
   }
 }
